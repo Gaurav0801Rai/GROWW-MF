@@ -1,0 +1,46 @@
+{
+  "run_id": "20260602_161250",
+  "timestamp": "2026-06-02T16:12:50.105000",
+  "results": [
+    {
+      "scheme_id": "hdfc_mid_cap_opportunities",
+      "name": "HDFC Mid-Cap Opportunities Fund Direct Growth",
+      "url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth",
+      "status": "success",
+      "file_path": "data/raw\\20260602_161250\\hdfc_mid_cap_opportunities.html",
+      "response_code": 200
+    },
+    {
+      "scheme_id": "hdfc_top_100",
+      "name": "HDFC Top 100 Fund Direct Growth",
+      "url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+      "status": "success",
+      "file_path": "data/raw\\20260602_161250\\hdfc_top_100.html",
+      "response_code": 200
+    },
+    {
+      "scheme_id": "hdfc_small_cap",
+      "name": "HDFC Small Cap Fund Direct Growth",
+      "url": "https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth",
+      "status": "success",
+      "file_path": "data/raw\\20260602_161250\\hdfc_small_cap.html",
+      "response_code": 200
+    },
+    {
+      "scheme_id": "hdfc_gold_etf_fof",
+      "name": "HDFC Gold ETF Fund of Fund Direct Plan Growth",
+      "url": "https://groww.in/mutual-funds/hdfc-gold-etf-fund-of-fund-direct-plan-growth",
+      "status": "success",
+      "file_path": "data/raw\\20260602_161250\\hdfc_gold_etf_fof.html",
+      "response_code": 200
+    },
+    {
+      "scheme_id": "hdfc_defence",
+      "name": "HDFC Defence Fund Direct Growth",
+      "url": "https://groww.in/mutual-funds/hdfc-defence-fund-direct-growth",
+      "status": "success",
+      "file_path": "data/raw\\20260602_161250\\hdfc_defence.html",
+      "response_code": 200
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# IDE config
+.gemini/
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Python Cache & Tests
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local databases & credentials
+.env
+*.db
+*.sqlite3
+data/threads.sqlite3
+data/chroma/
+
+# Operating system files
+.DS_Store
+Thumbs.db

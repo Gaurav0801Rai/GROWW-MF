@@ -1,0 +1,45 @@
+name: Daily Mutual Fund Data Ingestion
+
+on:
+  schedule:
+    # Run daily at 10:00 AM IST (04:30 UTC)
+    - cron: '30 4 * * *'
+  workflow_dispatch:
+    # Allow manual triggering of the workflow from the Actions tab
+
+jobs:
+  ingest:
+    name: Run Ingestion Pipeline
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Ingestion Pipeline
+        env:
+          INGEST_USER_AGENT: ${{ secrets.INGEST_USER_AGENT || 'MutualFundFAQBot/1.0 (Facts-Only QA Assistant; GitHub Actions Scheduled Ingest)' }}
+          INGEST_RATE_LIMIT_SECONDS: '2.0'
+        run: |
+          python ingest/pipeline.py --scrape
+
+      - name: Upload Ingestion Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ingest-data-artifacts
+          path: |
+            data/raw/
+            data/structured/
+            data/chroma/
+          retention-days: 7
