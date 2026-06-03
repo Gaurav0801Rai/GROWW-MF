@@ -3,10 +3,11 @@ import json
 import logging
 import hashlib
 import glob
+import requests
+import time
 from datetime import datetime, timezone
 import chromadb
 from chromadb.api.types import EmbeddingFunction, Documents, Embeddings
-from sentence_transformers import SentenceTransformer
 
 from ingest.scraper import Scraper
 from ingest.parser import Parser
@@ -17,16 +18,45 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 class LocalBGEEmbeddingFunction(EmbeddingFunction):
-    """Custom embedding function using local sentence-transformers BGE model."""
+    """Custom embedding function using Hugging Face Serverless Inference API for BGE model."""
     def __init__(self, model_name="BAAI/bge-small-en-v1.5"):
-        logger.info(f"Loading local embedding model: {model_name}")
-        self.model = SentenceTransformer(model_name)
-        logger.info("Embedding model loaded successfully.")
+        self.model_name = model_name
+        self.api_url = f"https://api-inference.huggingface.co/pipeline/feature-extraction/{model_name}"
+        self.headers = {}
+        token = os.getenv("HF_TOKEN")
+        if token:
+            self.headers["Authorization"] = f"Bearer {token}"
+        logger.info(f"Hugging Face Serverless Inference API initialized for model: {model_name} (Authenticated: {bool(token)})")
 
     def __call__(self, input: Documents) -> Embeddings:
-        # Generate normalized embeddings and return as list
-        embeddings = self.model.encode(input, normalize_embeddings=True)
-        return embeddings.tolist()
+        payload = {"inputs": input, "options": {"wait_for_model": True}}
+        
+        # Retry logic for model loading / temporary network glitches
+        for attempt in range(3):
+            try:
+                response = requests.post(self.api_url, headers=self.headers, json=payload, timeout=30)
+                if response.status_code == 200:
+                    embeddings = response.json()
+                    if isinstance(embeddings, list) and len(embeddings) > 0:
+                        if not isinstance(embeddings[0], list):
+                            embeddings = [embeddings]
+                        return embeddings
+                    raise ValueError(f"Unexpected HF response format: {embeddings}")
+                elif response.status_code == 503:
+                    # Model is loading on Hugging Face servers
+                    err_json = response.json()
+                    estimated_time = err_json.get("estimated_time", 10)
+                    logger.warning(f"HF Model is currently loading. Waiting {estimated_time}s (attempt {attempt + 1}/3)...")
+                    time.sleep(min(estimated_time, 10))
+                else:
+                    raise ValueError(f"HF API returned status {response.status_code}: {response.text}")
+            except Exception as e:
+                logger.error(f"HF embedding generation failed (attempt {attempt + 1}/3): {e}")
+                if attempt == 2:
+                    raise e
+                time.sleep(2)
+        raise ValueError("Failed to get embeddings from Hugging Face Inference API.")
+
 
 class IngestionPipeline:
     def __init__(self, registry_path="ingest/registry.json", raw_dir="data/raw", 

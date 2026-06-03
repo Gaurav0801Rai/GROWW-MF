@@ -33,7 +33,7 @@ export default function Home() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [lastUpdated, setLastUpdated] = useState<string>("May 2024");
+  const [lastUpdated, setLastUpdated] = useState<string>("Connecting...");
 
   // Fetch metadata from backend (crawl date)
   useEffect(() => {
@@ -47,10 +47,15 @@ export default function Home() {
             const options: Intl.DateTimeFormatOptions = { month: "long", year: "numeric" };
             const formatted = date.toLocaleDateString("en-US", options);
             setLastUpdated(formatted);
+          } else {
+            setLastUpdated("Offline");
           }
+        } else {
+          setLastUpdated("Offline");
         }
       } catch (e) {
         console.error("Failed to fetch metadata", e);
+        setLastUpdated("Offline");
       }
     };
     fetchMetadata();

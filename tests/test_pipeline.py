@@ -5,17 +5,34 @@ import numpy as np
 from unittest.mock import patch, MagicMock
 from ingest.pipeline import IngestionPipeline, LocalBGEEmbeddingFunction
 
-def test_local_bge_embedding_function():
-    # Test that the embedding function returns a list of items of dimension 384
+@patch("ingest.pipeline.requests.post")
+def test_local_bge_embedding_function(mock_post):
+    # Mock successful response from HF Inference API
+    mock_resp = MagicMock()
+    mock_resp.status_code = 200
+    mock_resp.json.return_value = [[0.1] * 384, [0.2] * 384]
+    mock_post.return_value = mock_resp
+
     fn = LocalBGEEmbeddingFunction()
     docs = ["HDFC Mutual Fund", "Top 100 Scheme Direct Growth"]
     embeddings = fn(docs)
     assert isinstance(embeddings, list)
     assert len(embeddings) == 2
     assert len(embeddings[0]) == 384
+    mock_post.assert_called_once()
 
+@patch("ingest.pipeline.requests.post")
 @patch("ingest.pipeline.Scraper")
-def test_pipeline_run(mock_scraper_class, tmp_path):
+def test_pipeline_run(mock_scraper_class, mock_post, tmp_path):
+    # Mock Hugging Face API to return correct dimensions based on number of input documents
+    def mock_post_side_effect(url, headers, json, timeout):
+        inputs = json.get("inputs", [])
+        resp = MagicMock()
+        resp.status_code = 200
+        resp.json.return_value = [[0.1] * 384 for _ in range(len(inputs))]
+        return resp
+    mock_post.side_effect = mock_post_side_effect
+
     run_id = "20260602_120000"
     raw_dir = tmp_path / "raw"
     run_dir = raw_dir / run_id
