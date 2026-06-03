@@ -64,6 +64,11 @@ class MessageResponse(BaseModel):
 class ThreadResponse(BaseModel):
     thread_id: str
 
+@app.get("/")
+def read_root():
+    """Root endpoint to verify API is running."""
+    return {"message": "Groww Mutual Fund FAQ API is running. Use /health to check status."}
+
 @app.get("/health")
 def health_check():
     """Liveness probe endpoint."""
