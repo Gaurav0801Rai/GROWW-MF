@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 PORT = int(os.getenv("PORT", "8000"))
-API_HOST = os.getenv("API_HOST", "127.0.0.1")
+API_HOST = os.getenv("API_HOST", "0.0.0.0")
 INGEST_CHROMA_DIR = os.getenv("INGEST_CHROMA_DIR", "data/chroma")
 INGEST_CHROMA_COLLECTION = os.getenv("INGEST_CHROMA_COLLECTION", "mf_faq_chunks")
 THREAD_DB_PATH = os.getenv("THREAD_DB_PATH", "data/threads.sqlite3")
