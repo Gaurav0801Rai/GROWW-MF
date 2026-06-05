@@ -30,6 +30,7 @@ jobs:
       - name: Run Ingestion Pipeline
         env:
           PYTHONPATH: ${{ github.workspace }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
           INGEST_USER_AGENT: ${{ secrets.INGEST_USER_AGENT || 'MutualFundFAQBot/1.0 (Facts-Only QA Assistant; GitHub Actions Scheduled Ingest)' }}
           INGEST_RATE_LIMIT_SECONDS: '2.0'
         run: |

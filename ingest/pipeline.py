@@ -21,7 +21,7 @@ class LocalBGEEmbeddingFunction(EmbeddingFunction):
     """Custom embedding function using Hugging Face Serverless Inference API for BGE model."""
     def __init__(self, model_name="BAAI/bge-small-en-v1.5"):
         self.model_name = model_name
-        self.api_url = f"https://api-inference.huggingface.co/pipeline/feature-extraction/{model_name}"
+        self.api_url = f"https://router.huggingface.co/hf-inference/models/{model_name}"
         self.headers = {}
         token = os.getenv("HF_TOKEN")
         if token:
