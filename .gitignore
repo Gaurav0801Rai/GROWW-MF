@@ -19,7 +19,10 @@ __pycache__/
 *.db
 *.sqlite3
 data/threads.sqlite3
-data/chroma/
+
+# Allow Chroma DB directory and its internal files to be tracked in Git
+!data/chroma/
+!data/chroma/**
 
 # Operating system files
 .DS_Store
