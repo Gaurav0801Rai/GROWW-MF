@@ -1,60 +1,12 @@
 [
   {
-    "scheme_id": "hdfc_top_100",
-    "scheme_name": "HDFC Top 100 Fund Direct Growth",
-    "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
-    "fetched_at": "2026-06-09T08:08:32.801603+00:00",
-    "nav": "₹1153.827",
-    "minimum_sip": "₹100",
-    "fund_size_aum": "₹38,121.27 Cr",
-    "expense_ratio": "0.99%",
-    "riskometer": "Very High",
-    "benchmark": "NIFTY 100 TRI",
-    "fund_managers": [
-      "Rahul Baijal (Tenure: from 2022-07-28T18:30:00.000Z) - Education: Mr. Baijal has done PGDM(MBA) from IIM Calcutta and is an engineering graduate of Delhi college of Engineering - Experience: Prior to joining HDFC Mutual Fund, he has worked with Sundaram Mutual Fund, Bharti AXA Life Insurance, TVF Capital, HSBC Securities, Credit Suisse Securities & Standard Chartered Bank.",
-      "Dhruv Muchhal (Tenure: from 2023-06-21T18:30:00.000Z) - Education: Mr. Dhruv has done B.Com, CA and CFA - Experience: Prior to joining HDFC MF,he has worked with Motilal Oswal Financial Services Ltd., Goldman Sachs, CRISIL Global Research & Analytics and Deloitte Haskins & Sells"
-    ]
-  },
-  {
-    "scheme_id": "hdfc_gold_etf_fof",
-    "scheme_name": "HDFC Gold ETF Fund of Fund Direct Plan Growth",
-    "source_url": "https://groww.in/mutual-funds/hdfc-gold-etf-fund-of-fund-direct-plan-growth",
-    "fetched_at": "2026-06-09T08:08:32.801603+00:00",
-    "nav": "₹46.8876",
-    "minimum_sip": "₹100",
-    "fund_size_aum": "₹11,464.35 Cr",
-    "expense_ratio": "0.2%",
-    "riskometer": "High",
-    "benchmark": "Domestic Price of Gold",
-    "fund_managers": [
-      "Arun Agarwal (Tenure: from 2023-02-14T18:30:00.000Z) - Education: Mr. Agarwal is a B.Com. and Chartered Accountant - Experience: Prior to joining HDFC Asset Management Company Limited, he has worked with SBI Funds Management Pvt. Ltd., ICICI Bank Limited, UTI Asset Management Pvt. Ltd.",
-      "Nandita Menezes (Tenure: from 2025-03-28T18:30:00.000Z) - Education: CA (ICAI, INDIA), B.Com (University of Mumbai) - Experience: Prior to joining HDFC AMC, she was associated with S.V. Ghatalia & Associates LLP."
-    ]
-  },
-  {
-    "scheme_id": "hdfc_mid_cap_opportunities",
-    "scheme_name": "HDFC Mid-Cap Opportunities Fund Direct Growth",
-    "source_url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth",
-    "fetched_at": "2026-06-09T08:08:32.801603+00:00",
-    "nav": "₹218",
-    "minimum_sip": "₹100",
-    "fund_size_aum": "₹94,744.72 Cr",
-    "expense_ratio": "0.73%",
-    "riskometer": "Very High",
-    "benchmark": "NIFTY Midcap 150 TRI",
-    "fund_managers": [
-      "Chirag Setalvad (Tenure: from 2012-12-31T18:30:00.000Z) - Education: Mr. Setalvad is a B. Sc and MBA from University of North Carolina. - Experience: Prior to joining HDFC AMC he has worked with New Vernon Advisory Services Ltd., HDFC AMC and ING Barings N.V.",
-      "Dhruv Muchhal (Tenure: from 2023-06-21T18:30:00.000Z) - Education: Mr. Dhruv has done B.Com, CA and CFA - Experience: Prior to joining HDFC MF,he has worked with Motilal Oswal Financial Services Ltd., Goldman Sachs, CRISIL Global Research & Analytics and Deloitte Haskins & Sells"
-    ]
-  },
-  {
     "scheme_id": "hdfc_defence",
     "scheme_name": "HDFC Defence Fund Direct Growth",
     "source_url": "https://groww.in/mutual-funds/hdfc-defence-fund-direct-growth",
-    "fetched_at": "2026-06-09T08:08:32.801603+00:00",
-    "nav": "₹28.397",
+    "fetched_at": "2026-06-10T08:32:31.487993+00:00",
+    "nav": "₹28.933",
     "minimum_sip": "₹100",
-    "fund_size_aum": "₹9,123.61 Cr",
+    "fund_size_aum": "₹9,724.27 Cr",
     "expense_ratio": "0.83%",
     "riskometer": "Very High",
     "benchmark": "Nifty India Defence TRI",
@@ -65,19 +17,67 @@
     ]
   },
   {
+    "scheme_id": "hdfc_gold_etf_fof",
+    "scheme_name": "HDFC Gold ETF Fund of Fund Direct Plan Growth",
+    "source_url": "https://groww.in/mutual-funds/hdfc-gold-etf-fund-of-fund-direct-plan-growth",
+    "fetched_at": "2026-06-10T08:32:31.487993+00:00",
+    "nav": "₹47.278",
+    "minimum_sip": "₹100",
+    "fund_size_aum": "₹12,121.18 Cr",
+    "expense_ratio": "0.2%",
+    "riskometer": "High",
+    "benchmark": "Domestic Price of Gold",
+    "fund_managers": [
+      "Arun Agarwal (Tenure: from 2023-02-14T18:30:00.000Z) - Education: Mr. Agarwal is a B.Com. and Chartered Accountant - Experience: Prior to joining HDFC Asset Management Company Limited, he has worked with SBI Funds Management Pvt. Ltd., ICICI Bank Limited, UTI Asset Management Pvt. Ltd.",
+      "Nandita Menezes (Tenure: from 2025-03-28T18:30:00.000Z) - Education: CA (ICAI, INDIA), B.Com (University of Mumbai) - Experience: Prior to joining HDFC AMC, she was associated with S.V. Ghatalia & Associates LLP."
+    ]
+  },
+  {
     "scheme_id": "hdfc_small_cap",
     "scheme_name": "HDFC Small Cap Fund Direct Growth",
     "source_url": "https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth",
-    "fetched_at": "2026-06-09T08:08:32.801603+00:00",
-    "nav": "₹150.698",
+    "fetched_at": "2026-06-10T08:32:31.487993+00:00",
+    "nav": "₹152.803",
     "minimum_sip": "₹100",
-    "fund_size_aum": "₹38,168.18 Cr",
+    "fund_size_aum": "₹38,809.48 Cr",
     "expense_ratio": "0.73%",
     "riskometer": "Very High",
     "benchmark": "BSE 250 SmallCap TRI",
     "fund_managers": [
       "Dhruv Muchhal (Tenure: from 2023-06-21T18:30:00.000Z) - Education: Mr. Dhruv has done B.Com, CA and CFA - Experience: Prior to joining HDFC MF,he has worked with Motilal Oswal Financial Services Ltd., Goldman Sachs, CRISIL Global Research & Analytics and Deloitte Haskins & Sells",
       "Chirag Setalvad (Tenure: from 2014-06-27T18:30:00.000Z) - Education: Mr. Setalvad is a B. Sc and MBA from University of North Carolina. - Experience: Prior to joining HDFC AMC he has worked with New Vernon Advisory Services Ltd., HDFC AMC and ING Barings N.V."
+    ]
+  },
+  {
+    "scheme_id": "hdfc_mid_cap_opportunities",
+    "scheme_name": "HDFC Mid-Cap Opportunities Fund Direct Growth",
+    "source_url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth",
+    "fetched_at": "2026-06-10T08:32:31.487993+00:00",
+    "nav": "₹220.409",
+    "minimum_sip": "₹100",
+    "fund_size_aum": "₹97,350.48 Cr",
+    "expense_ratio": "0.73%",
+    "riskometer": "Very High",
+    "benchmark": "NIFTY Midcap 150 TRI",
+    "fund_managers": [
+      "Chirag Setalvad (Tenure: from 2012-12-31T18:30:00.000Z) - Education: Mr. Setalvad is a B. Sc and MBA from University of North Carolina. - Experience: Prior to joining HDFC AMC he has worked with New Vernon Advisory Services Ltd., HDFC AMC and ING Barings N.V.",
+      "Dhruv Muchhal (Tenure: from 2023-06-21T18:30:00.000Z) - Education: Mr. Dhruv has done B.Com, CA and CFA - Experience: Prior to joining HDFC MF,he has worked with Motilal Oswal Financial Services Ltd., Goldman Sachs, CRISIL Global Research & Analytics and Deloitte Haskins & Sells"
+    ]
+  },
+  {
+    "scheme_id": "hdfc_top_100",
+    "scheme_name": "HDFC Top 100 Fund Direct Growth",
+    "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+    "fetched_at": "2026-06-10T08:32:31.487993+00:00",
+    "nav": "₹1161.656",
+    "minimum_sip": "₹100",
+    "fund_size_aum": "₹37,808.31 Cr",
+    "expense_ratio": "0.99%",
+    "riskometer": "Very High",
+    "benchmark": "NIFTY 100 TRI",
+    "fund_managers": [
+      "Rahul Baijal (Tenure: from 2022-07-28T18:30:00.000Z) - Education: Mr. Baijal has done PGDM(MBA) from IIM Calcutta and is an engineering graduate of Delhi college of Engineering - Experience: Prior to joining HDFC Mutual Fund, he has worked with Sundaram Mutual Fund, Bharti AXA Life Insurance, TVF Capital, HSBC Securities, Credit Suisse Securities & Standard Chartered Bank.",
+      "Dhruv Muchhal (Tenure: from 2023-06-21T18:30:00.000Z) - Education: Mr. Dhruv has done B.Com, CA and CFA - Experience: Prior to joining HDFC MF,he has worked with Motilal Oswal Financial Services Ltd., Goldman Sachs, CRISIL Global Research & Analytics and Deloitte Haskins & Sells"
     ]
   }
 ]
